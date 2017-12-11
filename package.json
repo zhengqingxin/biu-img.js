@@ -1,0 +1,25 @@
+{
+  "name": "biujs",
+  "version": "0.0.2",
+  "description": "bullet screen js library",
+  "main": "dist/biu.min.js",
+  "scripts": {
+    "watch": "webpack -w",
+    "build": "webpack"
+  },
+  "author": "362965772@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.0",
+    "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1"
+  }
+}
