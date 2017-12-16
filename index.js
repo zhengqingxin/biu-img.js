@@ -43,22 +43,26 @@ class BiuImg {
     Object.assign(img.style, this.imgStyle,{left});
     img.src = item.src;
     this.container.appendChild(img);
-    this.lastImg = img;
-    let width = img.getBoundingClientRect().width;
-    const duration = this.duration;
 
+    img.onload = ()=>{
+      this.lastImg = img;
+      const imgBcr = img.getBoundingClientRect();
+      let width = imgBcr.right - imgBcr.left;
+      const duration = this.duration;
+      anime({
+        targets: img,
+        left: -width,
+        duration: this.duration,
+        easing: 'linear',
+        complete: () => {
+          this.container.removeChild(img)
+        }
+      })
+    }
     // use css animation
     // img.className += ' go';
     
-    anime({
-      targets: img,
-      left: -width,
-      duration: this.duration,
-      easing: 'linear',
-      complete: () => {
-        this.container.removeChild(img)
-      }
-    })
+   
   }
 
 }
