@@ -1,6 +1,6 @@
 {
   "name": "biu-img.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bullet screen js library",
   "main": "dist/biu-img.min.js",
   "scripts": {
