@@ -46,21 +46,25 @@ class BiuImg {
 
     img.onload = ()=>{
       this.lastImg = img;
-      const imgBcr = img.getBoundingClientRect();
-      let width = imgBcr.right - imgBcr.left;
-      const duration = this.duration;
-      anime({
-        targets: img,
-        left: -width,
-        duration: this.duration,
-        easing: 'linear',
-        complete: () => {
-          this.container.removeChild(img)
-        }
-      })
+      // use css animation
+      img.className += ' go';
+      
+      
+      // const imgBcr = img.getBoundingClientRect();
+      // let width = imgBcr.right - imgBcr.left;
+      // const duration = this.duration;
+
+      // anime({
+      //   targets: img,
+      //   left: -width,
+      //   duration: this.duration,
+      //   easing: 'linear',
+      //   complete: () => {
+      //     this.container.removeChild(img)
+      //   }
+      // })
     }
-    // use css animation
-    // img.className += ' go';
+  
     
    
   }
