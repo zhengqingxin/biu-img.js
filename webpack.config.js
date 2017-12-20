@@ -32,7 +32,7 @@ module.exports = {
     extensions: ['.js', '.json']
   },
   plugins: [
-    new UglifyJSPlugin(),
-    new BundleAnalyzerPlugin(),
+    // new UglifyJSPlugin(),
+    // new BundleAnalyzerPlugin(),
   ]  
 };
