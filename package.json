@@ -2,7 +2,7 @@
   "name": "biu-img.js",
   "version": "0.0.2",
   "description": "bullet screen js library",
-  "main": "dist/biu-img.min.js",
+  "main": "index.js",
   "scripts": {
     "watch": "webpack -w",
     "build": "webpack"
