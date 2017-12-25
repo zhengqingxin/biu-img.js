@@ -49,6 +49,11 @@ class BiuImg {
       // use css animation
       img.className += ' go';
       
+
+      var transitionEnd = transitionEndEventName();    
+      img.addEventListener('animationend', ()=>{
+        this.container.removeChild(img);
+      }, false);
       
       // const imgBcr = img.getBoundingClientRect();
       // let width = imgBcr.right - imgBcr.left;
@@ -63,6 +68,24 @@ class BiuImg {
       //     this.container.removeChild(img)
       //   }
       // })
+    }
+
+    function transitionEndEventName () {
+      var i,
+          undefined,
+          el = document.createElement('div'),
+          transitions = {
+              'transition':'transitionend',
+              'OTransition':'otransitionend',  // oTransitionEnd in very old Opera
+              'MozTransition':'transitionend',
+              'WebkitTransition':'webkitTransitionEnd'
+          };
+  
+      for (i in transitions) {
+          if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
+              return transitions[i];
+          }
+      }
     }
   
     
